@@ -12,11 +12,11 @@ This repository includes automated test suites for a web application built with 
 
 ```
 .
-├── ui-automation-tests/         # Selenium UI tests
+├──tests-ui-automation/         # Selenium UI tests
 │   ├── pom.xml
 │   ├── src/test/java/...
 │
-├── postman/                     # Postman API tests
+├── tests-api-automation/        # Postman API tests
 │   ├── api-tests.json
 │   ├── environment.json
 └── README.md                    # Combined documentation
@@ -38,7 +38,7 @@ This repository includes automated test suites for a web application built with 
 1. Clone the repository:
    ```bash
    git clone https://github.com/teodoravermesan/test-automation.git
-   cd ui-automation
+   cd tests-ui-automation
    ```
 
 2. Edit the config:
@@ -85,8 +85,8 @@ Open the `ExtentReport.html` file in a browser to review results with logs and s
 
 1. Open Postman.
 2. Import files:
-   - Collection: `postman/ui-api-tests.postman_collection.json`
-   - Environment: `postman/environment.json`
+   - Collection: `tests-api-automation/api-tests.json`
+   - Environment: `tests-api-automation/environment.json`
 3. Set variables:
    - `baseUrl`: `http://localhost:3000/api`
 4. Run collection using Collection Runner.
@@ -95,7 +95,7 @@ Open the `ExtentReport.html` file in a browser to review results with logs and s
 
 ```bash
 cd postman
-newman run ui-api-tests.postman_collection.json -e environment.json
+newman run api-tests.json -e environment.json
 ```
 
 ### ✅ API Test Cases
@@ -148,5 +148,5 @@ You can integrate tests with CI tools like GitHub Actions, Jenkins, or GitLab CI
 - UI tests via Maven build step
 - API tests via Newman in CLI:
   ```bash
-  newman run postman/ui-api-tests.postman_collection.json -e postman/environment.json
+  newman run tests-api-automation/api-tests.json -e tests-api-automation/environment.json
   ```
