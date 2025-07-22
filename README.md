@@ -12,16 +12,13 @@ This repository includes automated test suites for a web application built with 
 
 ```
 .
-├── ui-automation/                # Selenium UI tests
+├── ui-automation-tests/         # Selenium UI tests
 │   ├── pom.xml
 │   ├── src/test/java/...
-│   └── README.md                # UI-specific instructions
 │
 ├── postman/                     # Postman API tests
-│   ├── ui-api-tests.postman_collection.json
+│   ├── api-tests.json
 │   ├── environment.json
-│   └── README.md                # API-specific instructions
-│
 └── README.md                    # Combined documentation
 ```
 
